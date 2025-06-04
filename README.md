@@ -85,8 +85,8 @@ WHERE mes >= '2024-01-01';
 
 ### 3. Sistema de Descuentos
 ```sql
--- Calcular descuento por volumen
-SELECT calcular_descuento_volumen(1, 75) as descuento_aplicado;
+-- Calcular ventas diarias
+SELECT * FROM vw_ventas_diarias LIMIT 30;
 ```
 
 ### 4. Top Productos
