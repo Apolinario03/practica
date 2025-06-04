@@ -8,12 +8,13 @@ La base de datos Northwind ha sido extendida con las siguientes mejoras:
 
 ### ✨ Nuevas Funcionalidades
 
-- **Sistema de Categorías Jerárquicas**: Subcategorías para mejor organización
-- **Control de Stock Avanzado**: Alertas automáticas y stock mínimo
-- **Descuentos por Volumen**: Sistema automatizado de descuentos
+- **Propuestas de alumno**: Agregar funcionalidades para mejorrar un carrito de compras
+- **CREATE TABLE shopping_cart **: Esta tabla almacenará los productos que un cliente tiene en su carrito
+- **vista carrito_cliente_total**: Vista para mostrar el resumen total del carrito por cliente
+- **Crear función vaciar_carrito**: Función para eliminar todos los productos del carrito de un cliente específico 
+- **Modificacion tabla products**: Añadir columnas jsonb para caracteristicas dinamicas
+- **Vistas**: vw_ventas_mes, vw_ventas_diarias, vw_ventas_empleado, vw_top_productos,vw_top_clientes, vw_ventas_categoria, vw_ventas_pais  
 - **Auditoría Completa**: Registro de cambios en productos
-- **Vistas de Análisis**: Reportes de ventas y productos
-- **Triggers Inteligentes**: Automatización de procesos
 
 ## 🛠️ Tecnologías
 
