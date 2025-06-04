@@ -26,7 +26,7 @@ La base de datos Northwind ha sido extendida con las siguientes mejoras:
 ```
 northwind-postgres-modificado/
 ├── README.md                          # Este archivo
-├── northwind_modificado.sql           # ⭐ DUMP COMPLETO DE LA BD
+├── modificado_northwind.sql           # ⭐ DUMP COMPLETO DE LA BD
 ├── docs/
 │   ├── INSTALACION.md                 # Guía de instalación
 │   ├── FUNCIONALIDADES.md             # Documentación de mejoras
