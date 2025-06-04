@@ -4,15 +4,16 @@ Este repositorio contiene una versión modificada de la base de datos Northwind 
 
 ## 📋 Descripción del Proyecto
 
-![Imagen JSONB](./img/images.png)
-![Imagen github JSONB](./img/github_image.png)
-
 La base de datos Northwind ha sido extendida con las siguientes mejoras:
 
 ### ✨ Nuevas Funcionalidades
 
 - **Sistema de Categorías Jerárquicas**: Subcategorías para mejor organización
-- **vuestra modificación**
+- **Control de Stock Avanzado**: Alertas automáticas y stock mínimo
+- **Descuentos por Volumen**: Sistema automatizado de descuentos
+- **Auditoría Completa**: Registro de cambios en productos
+- **Vistas de Análisis**: Reportes de ventas y productos
+- **Triggers Inteligentes**: Automatización de procesos
 
 ## 🛠️ Tecnologías
 
@@ -30,8 +31,8 @@ northwind-postgres-modificado/
 │   ├── INSTALACION.md                 # Guía de instalación
 │   ├── FUNCIONALIDADES.md             # Documentación de mejoras
 │   └── CONSULTAS_EJEMPLO.md           # Ejemplos de uso
-└── img/
-    ├── iagrama_er.png                # Diagrama actualizado
+└── screenshots/
+    ├── diagrama_er.png                # Diagrama actualizado
     └── consultas_ejemplo.png          # Capturas de pantalla
 ```
 
@@ -69,33 +70,32 @@ psql -d northwind_curso -f northwind_modificado.sql
 
 ## 🔍 Funcionalidades Principales
 
-### 1. Modificación de la tabla Products
-
-Objetivo: Añadir un campo JSON para almacenar atributos dinámicos de productos (ej: especificaciones técnicas, metadatos).
-
-1. Añadir la columna caracteristicas_json en la tabla Products.
-2. Rellenar la nueva columna con datos JSON
-Insertar ejemplos con valores específicos de "categoria" y "subcategoria".
-3. Ejecutar consultas sobre los datos JSON
-    Obtener productos de una categoría específica.
-    Filtrar productos según una subcategoría dentro del JSON.
-
-
-### 2. Control de Stock Inteligente
+### 1. Control de Stock Inteligente
 ```sql
 -- Ver productos con stock bajo
 SELECT * FROM productos_stock_bajo;
 ```
 
+### 2. Análisis de Ventas
+```sql
+-- Ventas por mes con métricas
+SELECT * FROM ventas_mensuales 
+WHERE mes >= '2024-01-01';
+```
 
-### 3. Propuesta del alumno
+### 3. Sistema de Descuentos
+```sql
+-- Calcular descuento por volumen
+SELECT calcular_descuento_volumen(1, 75) as descuento_aplicado;
+```
 
-Incluye aquí tu propuesta
-................
+### 4. Top Productos
+```sql
+-- Productos más vendidos
+SELECT * FROM top_productos_vendidos LIMIT 10;
+```
 
-
-
-## 📊 Nuevas Tablas Añadidas 
+## 📊 Nuevas Tablas Añadidas
 
 - `subcategories` - Categorías jerárquicas
 - `volume_discounts` - Descuentos por cantidad
@@ -182,8 +182,3 @@ Si tienes problemas con la instalación:
 ---
 
 **Nota**: Este proyecto demuestra conocimientos avanzados en PostgreSQL aplicados sobre la conocida base de datos Northwind, añadiendo funcionalidades empresariales reales.
-
-```sql
-CREATE TABLE cliente
-```
-
