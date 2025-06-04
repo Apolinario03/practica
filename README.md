@@ -137,8 +137,8 @@ SELECT count(*) FROM volume_discounts;     -- Debe mostrar 8
 SELECT count(*) FROM stock_alerts;        -- Debe mostrar varias
 
 -- Probar vistas
-SELECT count(*) FROM productos_stock_bajo;
-SELECT count(*) FROM ventas_mensuales;
+SELECT * FROM vw_ventas_mes;
+SELECT * FROM carrito_cliente_total;
 
 -- Probar función
 SELECT calcular_descuento_volumen(1, 100);  -- Debe mostrar 10.00
