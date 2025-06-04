@@ -57,7 +57,7 @@ createdb northwind_curso
 
 3. **Restaurar dump completo**
 ```bash
-psql -d northwind_curso -f northwind_modificado.sql
+psql -d northwind_curso -f modificado_northwind.sql
 ```
 
 ¡Y listo! La base de datos estará completamente configurada con datos de ejemplo.
@@ -65,7 +65,7 @@ psql -d northwind_curso -f northwind_modificado.sql
 ### Alternativa con pgAdmin
 1. Crear nueva base de datos llamada `northwind_curso`
 2. Click derecho → Restore
-3. Seleccionar archivo `northwind_modificado.sql`
+3. Seleccionar archivo `modificado_northwind.sql`
 4. Ejecutar
 
 ## 🔍 Funcionalidades Principales
