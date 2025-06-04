@@ -82,9 +82,8 @@ WHERE caracteristicas_json->>'categoria' = 'Electrónica';
 
 ### 2. Análisis de Ventas
 ```sql
--- Ventas por mes con métricas
-SELECT * FROM ventas_mensuales 
-WHERE mes >= '2024-01-01';
+-- Ventas por dias
+SELECT * FROM vw_ventas_diarias;
 ```
 
 ### 3. Sistema de Descuentos
