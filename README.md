@@ -71,10 +71,13 @@ psql -d northwind_curso -f modificado_northwind.sql
 
 ## 🔍 Funcionalidades Principales
 
-### 1. Control de Stock Inteligente
+### 1. Consulta sobre los datos de json
 ```sql
--- Ver productos con stock bajo
-SELECT * FROM productos_stock_bajo;
+-- Obtener productos de una categoría específica
+SELECT product_id, product_name, caracteristicas_json
+FROM products
+WHERE caracteristicas_json->>'categoria' = 'Electrónica';
+
 ```
 
 ### 2. Análisis de Ventas
