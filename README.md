@@ -96,7 +96,7 @@ SELECT calcular_descuento_volumen(1, 75) as descuento_aplicado;
 ### 4. Top Productos
 ```sql
 -- Productos más vendidos
-SELECT * FROM top_productos_vendidos LIMIT 10;
+SELECT * FROM vw_top_productos ;
 ```
 
 ## 📊 Nuevas Tablas Añadidas
